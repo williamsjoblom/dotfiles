@@ -3,7 +3,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(custom-safe-themes
+   (quote
+    ("9960cc55931596d259ec3673ea7139c0090f21be4bd64728eefac0c949c843af" "97f9438943105a17eeca9f1a1c4c946765e364957749e83047d6ee337b5c0a73" default))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -19,12 +21,13 @@
 (require 'go-mode-load)
 (require 'dart-mode-load)
 
+
 ;; relative linenumbers
 ;;(require 'linum-relative)
 
 
 ;; theme configuration
-(load-theme 'solarized t)
+;; (load-theme 'solarized t)
 
 
 
@@ -66,4 +69,9 @@
    'package-archives
    '("melpa" . "http://melpa.org/packages/")
    t)
-  (package-initialize))
+(package-initialize))
+
+(load-theme 'material t)
+
+;; haskell indentation
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
