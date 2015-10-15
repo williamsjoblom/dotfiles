@@ -7,6 +7,8 @@
 
 alias ls='ls --color=auto'
 
+alias lsd='ls -a | egrep "^\."'
+
 alias python2='python'
 alias python='python3'
 
