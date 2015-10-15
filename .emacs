@@ -25,26 +25,18 @@
 ;; relative linenumbers
 ;;(require 'linum-relative)
 
-
-;; theme configuration
-;; (load-theme 'solarized t)
-
-
-
 ;; font configuration
-(set-face-attribute 'default nil :height 90)
-;;(set-default-font "-misc-fantasque sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-10")
+(set-face-attribute 'default nil :height 95)
+(set-default-font "Source Code Pro Semibold:style=Semibold,Regular")
 
+(tool-bar-mode -1) ;; disable toolbar
+(menu-bar-mode -1) ;; disable menu
 
-;; remove toolbar & menu
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-
-;; line numbers
 (global-linum-mode t)
 
-;; inhibit splash-screen
 (setq inhibit-splash-screen t)
+(setq vc-follow-symlinks t)
+
 
 ;; key-bindings
 (global-set-key (kbd "C-M-.") 'next-buffer)
