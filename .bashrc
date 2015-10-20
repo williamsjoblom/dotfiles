@@ -15,5 +15,6 @@ alias python='python3'
 alias cl='clear'
 alias b='xbacklight -set'
 
+alias 'cd..'='cd ..'
 
 PS1='[\u@\h \W]\$ '
