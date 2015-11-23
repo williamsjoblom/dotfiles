@@ -21,6 +21,7 @@
 (require 'go-mode-load)
 (require 'dart-mode-load)
 
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 ;; relative linenumbers
 ;;(require 'linum-relative)
@@ -28,6 +29,8 @@
 ;; font configuration
 (set-face-attribute 'default nil :height 95)
 (set-default-font "Source Code Pro Semibold:style=Semibold,Regular")
+
+
 
 (tool-bar-mode -1) 
 (menu-bar-mode -1) 
@@ -63,6 +66,9 @@
    '("melpa" . "http://melpa.org/packages/")
    t)
 (package-initialize))
+
+(global-set-key (kbd "M-x") 'smex)
+
 
 (load-theme 'material t)
 
